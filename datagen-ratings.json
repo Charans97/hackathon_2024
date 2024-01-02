@@ -1,0 +1,21 @@
+{
+  "name": "datagen-ratings",
+  "config": {
+    "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
+    "kafka.topic": "ratings-topic",
+    "quickstart": "ratings",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "kafka.ssl.endpoint.identification.algorithm": "https",
+    "kafka.sasl.mechanism": "PLAIN",
+    "kafka.request.timeout.ms": "20000",
+    "kafka.bootstrap.servers": "pkc-4r087.us-west2.gcp.confluent.cloud:9092",
+    "kafka.retry.backoff.ms": "500",
+    "kafka.sasl.jaas.config": "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"ZXSLTL5UFPPW33RN\" password=\"GNGYi7bwRvmFRssEJObwcLP7xxTskAh6Pl14jPczygjf9gj8eQrM2Py/JKvJT3cF\";",
+    "dest.kafka.security.protocol": "SASL_SSL",
+    "max.interval": 10000,
+    "iterations": 100,
+    "tasks.max": "1"
+  }
+}
